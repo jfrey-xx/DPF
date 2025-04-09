@@ -402,7 +402,7 @@ struct WebBridge : NativeBridge {
                 var maxSize = $2;
                 var WAB = Module['WebAudioBridge'];
 
-                var offset = Module._malloc(maxSize);
+                var offset = _malloc(maxSize);
 
                 var inputCallback = function(event) {
                     if (event.data.length > maxSize)
